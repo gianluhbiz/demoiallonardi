@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #14100d;
+  --color-coal: #1c1713;
+  --color-char: #2a231d;
+  --color-cream: #f4ede2;
+  --color-paper: #ece3d4;
+  --color-sand: #d9ccb8;
+  --color-stone: #a89c8c;
+  --color-umber: #5c4f43;
+  --color-ember: #c8341f;
+  --color-ember-deep: #9e2615;
+  --color-brass: #c9a36a;
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
+
+  --animate-marquee: marquee 45s linear infinite;
+  --animate-marquee-reverse: marquee 55s linear infinite reverse;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply overflow-x-clip bg-ink font-sans text-cream;
+  }
+
+  ::selection {
+    @apply bg-ember text-cream;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-4 outline-brass;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
