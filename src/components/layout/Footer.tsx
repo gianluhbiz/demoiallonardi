@@ -108,7 +108,7 @@ export default function Footer() {
         </p>
         <p>
           <a href="https://gianluh.dev/" target="_blank" rel="noreferrer">
-            Developed and Designed by Gianluca De Maio
+            Developed and Designed by Gianluca De Maio <i className="ri-external-link-line"></i>
           </a>
         </p>
         <p>Foto: archivio Iallonardi e clienti su Tripadvisor</p>
